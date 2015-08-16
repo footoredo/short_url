@@ -1,0 +1,157 @@
+/*body {
+   background-image: url("/static/dot.png"); 
+  background-attachment: fixed;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+}
+#main {
+  width: 50%;
+  margin-top: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 110%;
+}
+#main input {
+  margin: 1px auto;
+  border-radius: 5px;
+  border: 1px solid #CCC;
+  font-size: 110%;
+  color: #AAA;
+}
+#main input:focus {
+  box-shadow: 0 0 3px #6699BB;
+  color: #000;
+}
+#form {
+  width: 100%;
+  margin-top: 20%;
+  padding: 5px 0;
+}
+#form input.warning {
+  box-shadow: 0 0 5px red;
+}
+#form input#url {
+  width: 100%;
+  min-height: 28px;
+  padding: 5px 0;
+}
+#form input#submit {
+  margin-right: 0;
+  font-size: 110%;
+  float: right;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+#form input.pointer {
+  cursor: pointer;
+}
+#form input.progress {
+  cursor: progress;
+}
+#form input#submit:hover {
+  color: #000;
+}
+#msg.hidden {
+  display: none;
+}
+#msg {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: red;
+  font-size: 110%;
+}
+#result {
+  clear: both;
+  width: auto;
+  margin: 10px auto;
+  min-height: 250px;
+}
+#result #shorten, #result #qrcode{
+  display: block;
+  width: 80%;
+  clear: both;
+  margin: 5px auto;
+}
+#result #shorten {
+  width: 50%;
+}
+#result input {
+  min-height: 25px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+#shorten-page {
+  margin-top: 30%;
+}
+#result img:-moz-broken {
+  -moz-force-broken-image-icon: 1;
+}
+*/
+#result div#qrcode {
+  width: 200px;
+  height: 200px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  margin: auto;
+}
+table#qrcode-table {
+  border: 0 none #0000ff;
+  border-collapse: collapse;
+  width: 200px;
+  height: 200px;
+  margin: auto;
+}
+table#qrcode-table tr td {
+  border: 0 none #0000ff !important;
+  border-collapse: collapse !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 4px !important;
+}
+table#qrcode-table tr td.dark {
+  background-color: #000 !important;
+}
+table#qrcode-table tr td.white {
+  background-color: #fff !important;
+}
+/*
+#footer {
+  clear: both;
+  /*position: relative;
+  /*top: 95%;
+  /*right: 5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-size: 100%;
+  /*float: right;
+  text-align: center;
+}
+#footer #source-code {
+}
+a {
+  color: #999;
+  text-decoration: none;
+  border-bottom: 1px dotted #AAA;
+}
+span a {
+  padding: 2px;
+}
+a:hover {
+  background-color: #EEE;
+  color: #000;
+}
+
+@media screen and (max-device-width: 680px) {
+  #main {
+    width: auto !important;
+  }
+  #result {
+    width: auto !important;
+  }
+  #result input#shorten {
+    width: auto !important;
+  }
+}
+*/

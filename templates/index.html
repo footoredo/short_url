@@ -1,0 +1,32 @@
+$var title: URL Shortener
+
+<div id="main">
+  <div id="msg" class="hidden alert alert-warning" role="alert">
+  </div>
+  <div class="page-header">
+    <h1> URL Shortener </h1>
+  </div>
+  <div id="form">
+    <form action="/shorten" method="post" onsubmit="return validForm()">
+    
+      <div class="form-group">
+        <label for="long_url">URL</label>
+        <input id="long_url" type="text" name="long_url" autofocus="autofocus" required="required" placeholder="Paste your long URL here" class="form-control">
+      </div>
+      
+      <div class="form-group">
+        <label for="short_url">Custom short URL</label>
+        <input id="short_url" type="text" name="short_url" class="form-control">
+        <p class="help-block">*Leave it blank if you want a random one.</p>
+        <p class="help-block">*Custom short URL should only contain letters and numbers and should be no less than 7 characters.</p>
+      </div>
+      
+      <button type="submit" class="btn btn-default">Submit</button>
+      
+      
+    </form>
+  </div>
+  <div id="result" style="visibility: hidden;">
+    <div><input type="url" name="shorten-url" value="" id="shorten"></div>
+  </div>
+</div>

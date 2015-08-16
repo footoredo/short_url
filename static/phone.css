@@ -1,0 +1,14 @@
+.container {
+  width: 30%
+}
+.result {
+  width: 50%
+}
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%
+  }
+  .result {
+    width: 100%
+  }
+}
