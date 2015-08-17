@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import os
+from secret_code import secret_code
 
 SITE_ROOT = os.path.dirname(os.path.abspath(__file__))
 
@@ -12,6 +13,7 @@ BASE_TEMPLATE = 'base'  # 基础模板
 # URL 映射
 URLS = (
     '/', 'Index',
+    '/%s' % secret_code, 'GetCode',
     '/show', 'Show',
     '(/j)?/shorten', 'Shorten',
     '/([0-9a-zA-Z]{1,})', 'Expand',

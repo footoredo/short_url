@@ -41,9 +41,9 @@ function validForm() {
     return true
   }
   if (shorten.length > 20) {
-    msg.innerHTML = "Customed short url cant't be <strong>greater than 20</strong> characters!";
+    msg.innerHTML = "Customed short url can't be <strong>greater than 20</strong> characters!";
     msg.className = "visible alert alert-danger";
-  } else if (shorten.length <= 6 && shorten.length > 0) {
+  } else if (shorten.length <= 6 && shorten.length > 0 && code.length == 0) {
     //document.getElementById("short_url").className = "danger";
     msg.innerHTML = "Customed short url can't be <strong>less than 7</strong> characters!";
     msg.className = "visible alert alert-danger";
@@ -51,6 +51,16 @@ function validForm() {
   } else if (!valid(shorten)) {
     //document.getElementById("short_url").className = "danger";
     msg.innerHTML = "Customed short url should only contain <strong>letters and numbers</strong>!";
+    msg.className = "visible alert alert-danger";
+    return false;
+  } 
+
+  if (code.length != 0 && code.length != 8) {
+    msg.innerHTML = "A code must have exactly 8 characters!";
+    msg.className = "visible alert alert-danger";
+  } else if (!valid(code)) {
+    //document.getElementById("short_url").className = "danger";
+    msg.innerHTML = "A code should only contain <strong>letters and numbers</strong>!";
     msg.className = "visible alert alert-danger";
     return false;
   } 

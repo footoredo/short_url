@@ -16,6 +16,11 @@ render = web.template.render(settings.TEMPLATE_DIR,
 app = web.application(settings.URLS, globals())
 db = models.DB()
 
+class GetCode(object):
+    def GET(self):
+        #return render.getcode("124343243")
+        return render.getcode(db.generate_code())
+
 class Show(object):
     def GET(self):
         return db.get_info()
@@ -103,8 +108,14 @@ class Shorten(object):
         url = self.add_scheme(url)
 
         shorten = web.input().short_url.strip()
-        if not shorten or self.db.exist_url(shorten):
+        code = web.input().code.strip()
+        randomed = False
+        if not shorten or self.db.exist_url(shorten) or ( len(shorten) <= 6 and not self.db.exist_code(code) ):
             shorten = self.db.generate_url()
+            randomed = True
+
+        if (len(code) > 0 and not randomed and len(shorten) <= 6):
+            self.db.delete_code(code)
 
         self.db.add_url(shorten, url)
         code = shorten

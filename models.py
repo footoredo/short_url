@@ -44,3 +44,25 @@ class DB(object):
         """
         self.cursor.execute("select url from map where shorten='%s'" % (short_url))
         return self.cursor.fetchone()
+
+    def exist_code(self, code):
+        return self.cursor.execute("select code from codes where code='%s'" % (code))
+
+    def add_code(self, code):
+        self.cursor.execute("insert into codes values('%s')" % code)
+        self.db.commit()
+    
+    def delete_code(self, code):
+        self.cursor.execute("delete from codes where code='%s'" % code)
+        self.db.commit()
+
+    def generate_code(self):
+        sigma = string.letters + string.digits
+
+        code = ''.join(random.sample(sigma, 8))
+        while (self.exist_code(code)):
+            code = ''.join(random.sample(sigma, 8))
+
+        self.add_code(code)
+
+        return code
