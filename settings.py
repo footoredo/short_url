@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import os
-from secret_code import secret_code
+from secret_code import secret_code, db_config
 
 SITE_ROOT = os.path.dirname(os.path.abspath(__file__))
 
@@ -20,3 +20,5 @@ URLS = (
     '/j/expand', 'Expand',
     '/.*', 'Index',
 )
+
+DB_CONFIG = db_config
