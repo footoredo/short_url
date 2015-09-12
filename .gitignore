@@ -1,5 +1,6 @@
 webpy.pid
 spawn-fcgi.sh
+restart.sh
 libs/*
 secret_code.py
 *.pyc

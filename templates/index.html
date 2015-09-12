@@ -16,9 +16,12 @@ $var title: URL Shortener
       
       <div class="form-group">
         <label for="short_url">Custom short URL</label>
-        <input id="short_url" type="text" name="short_url" class="form-control">
+        <div class="input-group">
+          <span class="input-group-addon" id="basic_addon1">https://fvck.it/</span>
+          <input id="short_url" type="text" name="short_url" class="form-control" aria-describedby="basic_addon1">
+        </div>
         <p class="help-block">*Leave it blank if you want a random one.</p>
-        <p class="help-block">*Custom short URL should only contain letters and numbers and should be no less than 7 characters.</p>
+        <p class="help-block">*Custom short URL should have no less than 7 and no more than 20 characters. 
       </div>
 
       <div class="form-group">

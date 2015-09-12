@@ -10,7 +10,7 @@ function addLoadEvent(func) {
     }
   }
 }
-
+/*
 
 // 去除字符串首尾空白符（" dog ".trim() === "dog"）
 // http://stackoverflow.com/questions/1418050/string-strip-for-javascript
@@ -19,7 +19,7 @@ if (typeof(String.prototype.trim) === "undefined") {
     return String(this).replace(/^\s+|\s+$/g, '');
   };
 }
-
+*/
 // 表单验证
 function validForm() {
   if (!document.getElementById) return false;
@@ -33,11 +33,11 @@ function validForm() {
   }
   var shorten = document.getElementById("short_url").value.trim();
   var valid = function(url) {
-    for (c in url.split()) {
+    /*for (c in url.split()) {
       letters = "abcdedfghijklmnopqrstuvwxyz"
       if (letters.indexOf(c) == -1 && letters.toUpperCase().indexOf(c) == -1 && "0123456789".indexOf(c) == -1)
         return false
-    }
+    }*/
     return true
   }
   if (shorten.length > 20) {
@@ -68,7 +68,7 @@ function validForm() {
   msg.innerHTML = "";
   return true;
 }
-
+/*
 
 // 生成 QR Code
 function create_qrcode(text) {//, typeNumber, errorCorrectLevel) {
@@ -217,3 +217,4 @@ function selectAll() {
 }
 
 addLoadEvent(selectAll);
+*/

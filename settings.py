@@ -13,12 +13,17 @@ BASE_TEMPLATE = 'base'  # 基础模板
 # URL 映射
 URLS = (
     '/', 'Index',
+    '/fvck.it.html', 'Wosign',
     '/%s' % secret_code, 'GetCode',
     '/show', 'Show',
     '(/j)?/shorten', 'Shorten',
-    '/([0-9a-zA-Z]{1,})', 'Expand',
     '/j/expand', 'Expand',
-    '/.*', 'Index',
+    '/(.*)', 'Expand',
 )
 
 DB_CONFIG = db_config
+
+WORDS_LIST = {
+  "ADJECTIVES_LIST": "adjectives.list",
+  "NOUNS_LIST": "nouns.list"
+}

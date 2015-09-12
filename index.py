@@ -16,6 +16,13 @@ render = web.template.render(settings.TEMPLATE_DIR,
 app = web.application(settings.URLS, globals())
 db = models.DB()
 
+def notfound():
+    return render.notfound()
+
+class Wosign(object):
+    def GET(self):
+        return open('fvck.it.html','r').read()
+
 class GetCode(object):
     def GET(self):
         #return render.getcode("124343243")
@@ -155,7 +162,7 @@ class Expand(object):
         if expand:
             return web.redirect(expand)  # 301 跳转
         else:
-            return web.seeother('/')
+            return web.notfound()
 
     def POST(self):
         """解析短网址，返回 json 数据"""
@@ -180,5 +187,6 @@ class Expand(object):
 if __name__ == '__main__':
     # 下面这条语句用于在服务器端通过 nginx + fastcgi 部署 web.py 应用
     #sys.path.append(os.path.realpath(os.path.dirname(__file__))) 
+    app.notfound = notfound
     web.wsgi.runwsgi = lambda func, addr=None: web.wsgi.runfcgi(func, addr)
     app.run()
