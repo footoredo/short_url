@@ -7,3 +7,5 @@ secret_code.py
 static/201*.png
 fvck.it.html
 googleverify
+ssl/*
+secured.py

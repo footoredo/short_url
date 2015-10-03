@@ -9,6 +9,7 @@ import settings
 import models
 import sys
 import datetime
+import os
 
 debug = web.config.debug = settings.DEBUG
 render = web.template.render(settings.TEMPLATE_DIR,
@@ -17,7 +18,7 @@ app = web.application(settings.URLS, globals())
 db = models.DB()
 
 def notfound():
-    return render.notfound()
+    return Exception(render.notfound())
 
 class Wosign(object):
     def GET(self):
@@ -186,7 +187,7 @@ class Expand(object):
 
 if __name__ == '__main__':
     # 下面这条语句用于在服务器端通过 nginx + fastcgi 部署 web.py 应用
-    #sys.path.append(os.path.realpath(os.path.dirname(__file__))) 
+#sys.path.append(os.path.realpath(os.path.dirname(__file__))) 
     app.notfound = notfound
     web.wsgi.runwsgi = lambda func, addr=None: web.wsgi.runfcgi(func, addr)
     app.run()

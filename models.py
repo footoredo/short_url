@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import web
-from libs import short_url
+import short_url
 import string
 import random
 import MySQLdb as mdb
