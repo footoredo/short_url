@@ -15,12 +15,12 @@
 
 4. Create a `configure.py`, of which the format is like the following:
 
-    secret_code = "" # A string contains only [A-Za-z0-9]
-
-    db_config = {
-        "host": "",
-        "user": "",
-        "passwd": "",
-        "db": "",
-        ...etc
-    }               # Params of connect(). see http://mysql-python.sourceforge.net/MySQLdb.html#mysqldb
+        secret_code = "" # A string contains only [A-Za-z0-9]
+    
+        db_config = {
+            "host": "",
+            "user": "",
+            "passwd": "",
+            "db": "",
+            ...etc
+        }               # Params of connect(). see http://mysql-python.sourceforge.net/MySQLdb.html#mysqldb
