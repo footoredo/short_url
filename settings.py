@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import os
-from secured import secret_code, db_config
+from configure import secret_code, db_config
 
 SITE_ROOT = os.path.dirname(os.path.abspath(__file__))
 
